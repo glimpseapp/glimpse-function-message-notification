@@ -6,12 +6,22 @@ This function listen for messages in the PubSub message_sent and send a push not
 
 Install
 -------
-Run ```firebase init```, choose Function and install the dependencies with ```npm install```.
+```
+firebase use --add
+cd functions
+npm install
+```
 
+Deploy
+------
+```
+firebase deploy
+```
 
-
-
-
+Test
+```
+gcloud alpha pubsub topics publish message-sent '{"test":Hello"}'
+```
 
 
 
